@@ -72,7 +72,7 @@ const NavBar = () => {
           <p>Buddy</p>
         </Logo>
         <LinksWrapper>
-          <StyledLink to={"/"} exact>
+          <StyledLink to={"/"} exact="true">
             users list
           </StyledLink>
           <StyledLink to={"/add-user"}>add user</StyledLink>

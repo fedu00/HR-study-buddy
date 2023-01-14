@@ -1,12 +1,36 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { ViewWrapper } from "../../components/molecues/viewWrapper/ViewWrapper";
 import { StyledTitle } from "../usersList/UsersList.styles";
 import FormField from "../../components/molecues/formField/FormField";
 import { Button } from "../../components/atoms/button/Button";
+import { UsersContext } from "../../providers/UsersProvider";
 
-const Form = ({ handleAddUser, formValue, handleInputChange }) => {
+const inicialFormState = {
+  name: "",
+  attendance: "",
+  average: "",
+};
+
+const AddUserForm = () => {
+  const [formValue, setFormValueformValue] = useState(inicialFormState);
+  // const context = useContext(UsersContext); ponizej jest skrócona forma
+  const { handleAddUser } = useContext(UsersContext);
+
+  const handleInputChange = (e) => {
+    setFormValueformValue({
+      ...formValue,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmitUser = (event) => {
+    event.preventDefault();
+    handleAddUser(formValue);
+    // context.handleAddUser(formValue);
+    setFormValueformValue(inicialFormState);
+  };
   return (
-    <ViewWrapper as="form" onSubmit={handleAddUser}>
+    <ViewWrapper as="form" onSubmit={handleSubmitUser}>
       <StyledTitle>Add new Student</StyledTitle>
       <FormField
         label="Name"
@@ -34,4 +58,4 @@ const Form = ({ handleAddUser, formValue, handleInputChange }) => {
   );
 };
 
-export default Form;
+export default AddUserForm;
