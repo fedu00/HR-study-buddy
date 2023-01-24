@@ -6,7 +6,7 @@ import { Wrapper } from "./Rood.styles";
 import { GloballStyle } from "../assets/icons/styles/GlobalStyle";
 import { theme } from "../assets/icons/styles/theme";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import MainTemplate from "../components/templates/MainTemplate";
+import MainTemplate from "../components/templates/maintemplate/MainTemplate";
 import AddUserForm from "./Form/AddUserForm";
 import UsersProvider from "../providers/UsersProvider";
 
