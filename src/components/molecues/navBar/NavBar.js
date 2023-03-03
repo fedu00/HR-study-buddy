@@ -10,7 +10,7 @@ const NavBar = () => {
           <p>Buddy</p>
         </Logo>
         <LinksWrapper>
-          <StyledLink to={"/"} exact="true">
+          <StyledLink to={"/group"} exact="true">
             users list
           </StyledLink>
           <StyledLink to={"/add-user"}>add user</StyledLink>

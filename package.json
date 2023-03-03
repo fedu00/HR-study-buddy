@@ -10,7 +10,7 @@
     "dotenv": "^16.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.6.2",
+    "react-router-dom": "^6.7.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
@@ -40,6 +40,10 @@
     ]
   },
   "devDependencies": {
-    "axios-mock-adapter": "^1.21.2"
+    "axios-mock-adapter": "^1.21.2",
+    "msw": "^1.0.0"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
